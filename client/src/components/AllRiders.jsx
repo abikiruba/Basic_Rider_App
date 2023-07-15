@@ -34,7 +34,7 @@ const AllRiders = () => {
     //Axios Connecting the get backend method with frontend
     const getAllRiders = async (page) => {
         try {
-            setIsLoading(true); // Start the loader
+            // setIsLoading(true); // Start the loader
 
             const response = await axios.get(`${BASEURL}/api/v1`, {
                 params: {
@@ -44,11 +44,11 @@ const AllRiders = () => {
                 },
             });
 
-            if (response.status === 200) {
-                setTimeout(() => {
+            if (response.status) {
+                // setTimeout(() => {
                     setRiders(response.data);
-                    setIsLoading(true); // Stop the loader after a delay
-                }, 2000); // Adjust the delay time as needed
+                    // setIsLoading(true); // Stop the loader after a delay
+                // }, 2000); // Adjust the delay time as needed
             }
         } catch (error) {
             console.error("Error retrieving riders:", error);
@@ -158,13 +158,14 @@ const AllRiders = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {isLoading ? (
+                            {false ? (
                                 <tr>
                                     <td colSpan="8">
                                         <Loader />
                                     </td>
                                 </tr>
-                            ) : (
+                            ) 
+                            : (
                                 riders.map((rider) => (
                                     <tr key={rider._id}>
                                         <td>{rider.Id}</td>
