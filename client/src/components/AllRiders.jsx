@@ -47,7 +47,7 @@ const AllRiders = () => {
             if (response.status === 200) {
                 setTimeout(() => {
                     setRiders(response.data);
-                    setIsLoading(false); // Stop the loader after a delay
+                    setIsLoading(true); // Stop the loader after a delay
                 }, 2000); // Adjust the delay time as needed
             }
         } catch (error) {
