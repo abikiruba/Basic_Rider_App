@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.responsive-table th {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.responsive-table img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-table table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+  }
+
+  .responsive-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .responsive-table tr {
+    border: 1px solid #ccc;
+  }
+
+  .responsive-table td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .responsive-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .responsive-table td:nth-of-type(1):before {
+    content: 'Id';
+  }
+
+  .responsive-table td:nth-of-type(2):before {
+    content: 'Name';
+  }
+
+  .responsive-table td:nth-of-type(3):before {
+    content: 'Email';
+  }
+
+  .responsive-table td:nth-of-type(4):before {
+    content: 'Position';
+  }
+
+  .responsive-table td:nth-of-type(5):before {
+    content: 'Status';
+  }
+
+  .responsive-table td:nth-of-type(6):before {
+    content: 'NRIC';
+  }
+
+  .responsive-table td:nth-of-type(7):before {
+    content: 'Image';
+  }
+
+  .responsive-table td:nth-of-type(8):before {
+    content: 'Actions';
+  }
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
