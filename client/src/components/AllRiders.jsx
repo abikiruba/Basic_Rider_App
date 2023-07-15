@@ -198,8 +198,8 @@ const AllRiders = () => {
                     <Button variant="contained" onClick={handlePreviousPage} disabled={currentPage === 1} sx={{ margin: '10px' }}>
                         Previous Page
                     </Button>
-                    <Button variant="contained" onClick={handleNextPage} disabled={isLoading} sx={{ margin: '10px' }}>
-                        {isLoading ? 'Loading...' : 'Next Page'}
+                    <Button variant="contained" onClick={handleNextPage} sx={{ margin: '10px' }}>
+                        Next Page
                     </Button>
                 </div>
             </Container>
