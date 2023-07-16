@@ -1,1 +1,1 @@
-export const BASEURL='https://basic-rider-app-final.onrender.com';
+export const BASEURL='https://rider-app-qhpb.onrender.com';
